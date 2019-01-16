@@ -48,7 +48,7 @@ java-testcase:
 	test -d "$(JAVA_MAPSCRIPT_PATH)" && (export JAVA_MAPSCRIPT_SO="../../$(JAVA_MAPSCRIPT_PATH)" && cd mapscript/java && ./run_test.sh)
 
 csharp-testcase:
-    test -d "$(CSHARP_MAPSCRIPT_PATH)" && (cd mapscript/csharp && ./run_test.sh)
+	test -d "$(CSHARP_MAPSCRIPT_PATH)" && (export CSHARP_MAPSCRIPT_SO="../../$(CSHARP_MAPSCRIPT_PATH)" && cd mapscript/csharp && ./run_test.sh)
 
 test:  cmakebuild
 	@$(MAKE) $(MFLAGS)	wxs-testcase renderers-testcase misc-testcase gdal-testcase query-testcase mspython-testcase
